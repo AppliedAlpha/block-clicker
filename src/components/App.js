@@ -2,10 +2,10 @@ import React from "react";
 import {firebaseInstance} from "fBase";
 
 const App = () => {
-    const firebaseApp = firebaseInstance.app;
+    console.log(firebaseInstance);
 
     return (
-        <div className="App">
+        <div>
             <h1>Hi</h1>
         </div>
     );
