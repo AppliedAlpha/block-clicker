@@ -1,13 +1,11 @@
 import React from "react";
-import {firebaseInstance} from "fBase";
+import Game from "./Game";
 
 const App = () => {
-    console.log(firebaseInstance);
-
     return (
-        <div>
-            <h1>Hi</h1>
-        </div>
+        <>
+        <Game />
+        </>
     );
 };
 
