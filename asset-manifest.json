@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/block-clicker/static/js/main.4cfc33fc.chunk.js",
-    "main.js.map": "/block-clicker/static/js/main.4cfc33fc.chunk.js.map",
-    "runtime-main.js": "/block-clicker/static/js/runtime-main.eaeae693.js",
-    "runtime-main.js.map": "/block-clicker/static/js/runtime-main.eaeae693.js.map",
-    "static/js/2.c6f0dfb9.chunk.js": "/block-clicker/static/js/2.c6f0dfb9.chunk.js",
-    "static/js/2.c6f0dfb9.chunk.js.map": "/block-clicker/static/js/2.c6f0dfb9.chunk.js.map",
+    "main.js": "/block-clicker/static/js/main.3a190df2.chunk.js",
+    "main.js.map": "/block-clicker/static/js/main.3a190df2.chunk.js.map",
+    "runtime-main.js": "/block-clicker/static/js/runtime-main.25402d03.js",
+    "runtime-main.js.map": "/block-clicker/static/js/runtime-main.25402d03.js.map",
+    "static/js/2.fed58b59.chunk.js": "/block-clicker/static/js/2.fed58b59.chunk.js",
+    "static/js/2.fed58b59.chunk.js.map": "/block-clicker/static/js/2.fed58b59.chunk.js.map",
     "index.html": "/block-clicker/index.html",
-    "static/js/2.c6f0dfb9.chunk.js.LICENSE.txt": "/block-clicker/static/js/2.c6f0dfb9.chunk.js.LICENSE.txt"
+    "static/js/2.fed58b59.chunk.js.LICENSE.txt": "/block-clicker/static/js/2.fed58b59.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.eaeae693.js",
-    "static/js/2.c6f0dfb9.chunk.js",
-    "static/js/main.4cfc33fc.chunk.js"
+    "static/js/runtime-main.25402d03.js",
+    "static/js/2.fed58b59.chunk.js",
+    "static/js/main.3a190df2.chunk.js"
   ]
 }
