@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
-const Upgrader = ({ name, price, addBps, buy }) => {
+const Upgrader = ({ name, price, addBps, buy, buyable }) => {
     const [nowPrice, setNowPrice] = useState(price);
 
     const onClick = () => {
-        if (!buy(nowPrice, addBps)) {
+        if (buyable(nowPrice)) {
+            buy(nowPrice, addBps);
             setNowPrice(val => Math.round(val * 1.1));
         }
     };
@@ -13,7 +14,7 @@ const Upgrader = ({ name, price, addBps, buy }) => {
         <>
             <div>
                 <p>{name}: -{nowPrice} Blocks, +{addBps} BPS</p>
-                <button onClick={onClick}>Buy!</button>
+                <button style={{opacity: buyable(nowPrice) ? 1.0 : 0.4}} onClick={onClick}>Buy!</button>
             </div>
         </>
     );
