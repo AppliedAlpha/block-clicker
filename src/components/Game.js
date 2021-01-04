@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import useInterval from "custom";
-import Test from "components/Test";
+import useInterval from "interval";
 import Upgrade from "components/Upgrade";
 
 const Game = () => {
-    const [blocksCount, setBlocksCount] = useState(0);
+    const [blocksCount, setBlocksCount] = useState(50000);
     const [delay, setDelay] = useState(1000);
     const [bpc, setBpc] = useState(1);
     const [bps, setBps] = useState(0);
@@ -12,6 +11,7 @@ const Game = () => {
     const [blockTier, setBlockTier] = useState(0);
     // const [imgRoute, setImgRoute] = useState("imgs/0.png");
 
+    // Should be fixed
     useEffect(() => {
         if (bps >= 60) {
             setTickBps(Math.round(bps / 60));
@@ -42,8 +42,6 @@ const Game = () => {
             <p>Blocks Per Click : {bpc}</p>
             <p>Blocks Per Second : {bps}</p>
             <Upgrade blocksCount={blocksCount} setBlocksCount={setBlocksCount} setBps={setBps} />
-            <p></p>
-            <Test setBpc={setBpc} setBps={setBps} />
         </>
     );
 };
