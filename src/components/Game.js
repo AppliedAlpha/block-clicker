@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import useInterval from "interval";
 import Upgrade from "components/Upgrade";
+import {formatNumber, useInterval} from "custom";
 
 const Game = () => {
-    const [blocksCount, setBlocksCount] = useState(50000);
+    const [blocksCount, setBlocksCount] = useState(5e8);
     const [delay, setDelay] = useState(1000);
     const [bpc, setBpc] = useState(1);
     const [bps, setBps] = useState(0);
@@ -35,7 +35,7 @@ const Game = () => {
 
     return (
         <>
-            <p>Your Blocks: {blocksCount}</p>
+            <p>Your Blocks: {formatNumber(blocksCount)}</p>
             <span onClick={onBlockClick}>
                 <button>I'm A Block Button.</button>
             </span>

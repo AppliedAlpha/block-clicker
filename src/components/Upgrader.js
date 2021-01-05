@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import formatNumber from "format";
+import {formatNumber} from "custom";
 
 const Upgrader = ({ name, price, addBps, buy, buyable }) => {
     const [nowPrice, setNowPrice] = useState(price);
@@ -18,8 +18,8 @@ const Upgrader = ({ name, price, addBps, buy, buyable }) => {
             <div>
                 <p>
                     {name} (Having {count}):
-                    -{formatNumber(nowPrice, 0)} Blocks,
-                    +{formatNumber(addBps, 1)} BPS
+                    -{formatNumber(nowPrice)} Blocks,
+                    +{formatNumber(addBps)} BPS
                 </p>
                 <button style={{opacity: buyable(nowPrice) ? 1.0 : 0.4}}
                         onClick={onClick}>
