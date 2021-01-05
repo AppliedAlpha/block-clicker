@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {formatNumber} from "custom";
 
-const Upgrader = ({ name, price, addBps, buy, buyable }) => {
+const Facility = ({ name, price, addBps, buy, buyable }) => {
     const [nowPrice, setNowPrice] = useState(price);
     const [count, setCount] = useState(0);
 
@@ -30,4 +30,4 @@ const Upgrader = ({ name, price, addBps, buy, buyable }) => {
     );
 };
 
-export default Upgrader;
+export default Facility;

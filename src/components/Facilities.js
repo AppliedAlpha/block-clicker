@@ -1,7 +1,7 @@
 import React from "react";
-import Upgrader from "components/Upgrader";
+import Facility from "components/Facility";
 
-const Upgrade = ({ blocksCount, setBlocksCount, setBps }) => {
+const Facilities = ({ blocksCount, setBlocksCount, setBps }) => {
     const buy = (price, addBps) => {
         setBlocksCount(cnt => cnt - price);
         setBps(val => Math.round((val + addBps) * 10) / 10);
@@ -38,7 +38,7 @@ const Upgrade = ({ blocksCount, setBlocksCount, setBps }) => {
         <>
             <div>
                 {upgraders.map(upgrader =>
-                    <Upgrader name={upgrader.name}
+                    <Facility name={upgrader.name}
                               price={upgrader.price}
                               addBps={upgrader.bps}
                               buy={buy}
@@ -50,4 +50,4 @@ const Upgrade = ({ blocksCount, setBlocksCount, setBps }) => {
     );
 };
 
-export default Upgrade;
+export default Facilities;

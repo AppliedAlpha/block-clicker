@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Upgrade from "components/Upgrade";
+import Facilities from "components/Facilities";
 import {formatNumber, useInterval} from "custom";
 
 const Game = () => {
@@ -41,7 +41,7 @@ const Game = () => {
             </span>
             <p>Blocks Per Click : {bpc}</p>
             <p>Blocks Per Second : {bps}</p>
-            <Upgrade blocksCount={blocksCount} setBlocksCount={setBlocksCount} setBps={setBps} />
+            <Facilities blocksCount={blocksCount} setBlocksCount={setBlocksCount} setBps={setBps} />
         </>
     );
 };

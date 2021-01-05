@@ -1,10 +1,5 @@
 import {useEffect, useRef} from "react";
 
-export const fixedNumber = (num, digits) => {
-    return num.toFixed(digits)
-        .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-};
-
 const formats = [
     {min: 1e6, max: 1e9, name: "Million"},
     {min: 1e9, max: 1e12, name: "Billion"},
@@ -14,17 +9,18 @@ const formats = [
     {min: 1e21, max: 1e24, name: "Sextillion"},
 ];
 
-export const formatNumber = (num, digits) => {
+export const formatNumber = (num) => {
     if (num < 1e6)
-        return num.toPrecision(digits)
-            .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
-            .toString();
+        return (Math.round(num * 1000) / 1000)
+            .toString()
+            .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
 
     return formats.map((format) => {
         if (num >= format.min && num < format.max) {
-            return (num / format.min).toFixed(3)
+            return (Math.round((num / format.min) * 1000) / 1000)
+                .toString()
                 .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
-                .toString() + " " + format.name;
+                + " " + format.name;
         }
     });
 };
