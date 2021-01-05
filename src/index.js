@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "components/App";
+import Game from "components/Game";
 
 ReactDOM.render(
     <React.StrictMode>
-        <App />
+        <Game />
     </React.StrictMode>,
     document.getElementById('root')
 );

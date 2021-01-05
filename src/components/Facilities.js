@@ -1,14 +1,14 @@
 import React from "react";
 import Facility from "components/Facility";
 
-const Facilities = ({ blocksCount, setBlocksCount, setBps }) => {
+const Facilities = ({ blocks, setBlocks, setBps }) => {
     const buy = (price, addBps) => {
-        setBlocksCount(cnt => cnt - price);
+        setBlocks(cnt => cnt - price);
         setBps(val => Math.round((val + addBps) * 10) / 10);
     };
 
     const buyable = (price) => {
-        return blocksCount >= price;
+        return blocks >= price;
     }
 
     // e6 = M, e9 = B, e12 = T, e15 = Qa,
