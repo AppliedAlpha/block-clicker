@@ -1,15 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import {formatNumber} from "custom";
 
-const Facility = ({ name, price, addBps, buy, buyable }) => {
-    const [nowPrice, setNowPrice] = useState(price);
-    const [count, setCount] = useState(0);
+const Facility = ({ name, price, addBps, count, buy, buyable }) => {
 
     const onClick = () => {
-        if (buyable(nowPrice)) {
-            buy(nowPrice, addBps);
-            setNowPrice(val => Math.round(val * 1.15));
-            setCount(val => val + 1);
+        if (buyable(price)) {
+            buy(price, name);
         }
     };
 
@@ -18,10 +14,10 @@ const Facility = ({ name, price, addBps, buy, buyable }) => {
             <div>
                 <p>
                     {name} (Having {count}):
-                    -{formatNumber(nowPrice)} Blocks,
-                    +{formatNumber(addBps)} BPS
+                    -{formatNumber(price, 0)} Blocks,
+                    +{formatNumber(addBps, 2)} BPS
                 </p>
-                <button style={{opacity: buyable(nowPrice) ? 1.0 : 0.4}}
+                <button style={{opacity: buyable(price) ? 1.0 : 0.4}}
                         onClick={onClick}>
                     Buy!
                 </button>
